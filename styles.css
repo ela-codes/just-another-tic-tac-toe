@@ -1,0 +1,137 @@
+:root {
+    --darkgray: #2d333b;
+    --lightgray: #747474;
+    --off-white: #e7ebf0;
+    --night: #22272e;
+  }
+
+@font-face {
+    font-family: 'Fish Grill Font';
+    src: url('/Fish Grill Font [Regular] by 7NTypes.otf') format('opentype');
+}
+
+html {
+    margin: 0;
+    padding: 0;
+}
+
+body {
+
+    font-size: 30px;
+    font-family: 'Fish Grill Font';
+    color: var(--off-white);
+    background-color: var(--night);
+}
+
+
+/* Start Game Modal */
+.game-modal,
+.results-modal {
+    display: block;
+    position: fixed;
+    z-index: 1;
+    padding-top: 15vh;
+    left: 0;
+    top: 0;
+    height: 100%;
+    width: 100%;
+    background-color: var(--night);
+}
+
+.results-modal {
+    display: none;
+}
+
+.start-game,
+.results-content {
+    font-size: 16px;
+    margin: auto;
+    padding: 25px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+h1 {
+    font-size: 70px;
+    margin: 0;
+}
+
+
+/* Game Board Content */
+.container {
+    padding-top: 15vh;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    height: 100%;
+    width: 100%;
+}
+
+
+.gameboard {
+    display: grid;
+    place-items: center;
+    grid-template-columns: repeat(3, 1fr);
+    cursor: pointer;
+    padding: 30px;
+}
+
+
+.col0,
+.col1,
+.col2 {
+    display: flex;
+    flex-direction: column-reverse;
+}
+
+.slot {
+    height: 100px;
+    width: 100px;
+    border: 1px solid var(--off-white);
+
+}
+
+.slot:hover,
+button:hover {
+    background: var(--lightgray)
+}
+
+button {
+    cursor: pointer;
+    font-size: 20px;
+    font-family: 'Fish Grill Font';
+
+}
+
+.PvP-btn,
+.restart {
+    margin: 20px;
+    width: fit-content;
+    padding-left: 40px;
+    padding-right: 40px;
+    height: 50px;
+    border: none;
+    outline: none;
+    color: #fff;
+    background: #111;
+    cursor: pointer;
+    position: relative;
+    z-index: 0;
+    border-radius: 10px;
+}
+
+footer {
+    font-family: Verdana, sans-serif;
+    opacity: 0.3;
+    font-style: italic;
+    padding-top: 10rem;
+    font-size: 16px;
+}
+
+
+a:visited {
+    color: var(--lightgray)
+}
+

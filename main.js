@@ -21,7 +21,7 @@ let moveCount = 0;
 let player = p1;
 
 
-const playGame = (currPlayer, currSlot, gameBoard) => {
+function playGame(currPlayer, currSlot, gameBoard) {
 
     currPlayer.allMoves.push(currSlot)
 
@@ -43,7 +43,7 @@ const playGame = (currPlayer, currSlot, gameBoard) => {
 
 }
 
-const checkForWin = (currPlayer) => {
+function checkForWin(currPlayer) {
    
     const winPatternChecker = (winArray, playerMoves) => {
         const checker = winArray.every(slot => playerMoves.includes(slot))
@@ -81,7 +81,7 @@ const checkForWin = (currPlayer) => {
 }
 
 
-const displayResult = (winStatus, currPlayer, resultModal) => {
+function displayResult(winStatus, currPlayer, resultModal) {
     const msgDisplay = document.querySelector('.results-msg');
 
     resultModal.style.display = 'block';
@@ -97,7 +97,7 @@ const displayResult = (winStatus, currPlayer, resultModal) => {
     winStatus === true ? announceWinner() :announceTie()
 }
 
-const resetGame = (slots, resultModal) => {
+function resetGame(slots, resultModal) {
     winnerFound = false;
     moveCount = 0;
     player = p1;
